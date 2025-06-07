@@ -1,0 +1,366 @@
+Using pre-set license
+Built from '6000.0/staging' branch; Version is '6000.0.23f1 (1c4764c07fb4) revision 1853284'; Using compiler version '193933523'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26100) 64bit Professional' Language: 'en' Physical Memory: 15715 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/hamza/UnityProjects/TMPRTL_ArabicFarsiUrduHebrew
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+59869
+-job-worker-count
+7
+-background-job-worker-count
+8
+-asset-garbage-collectors
+1
+Successfully changed project path to: C:/Users/hamza/UnityProjects/TMPRTL_ArabicFarsiUrduHebrew
+C:/Users/hamza/UnityProjects/TMPRTL_ArabicFarsiUrduHebrew
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [31984]  Target information:
+
+Player connection [31984]  * "[IP] 192.168.1.107 [Port] 0 [Flags] 2 [Guid] 515608689 [EditorId] 515608689 [Version] 1048832 [Id] WindowsEditor(7,Admin) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [31984] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [31984] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 7
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 10.45 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.0.23f1 (1c4764c07fb4)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/hamza/UnityProjects/TMPRTL_ArabicFarsiUrduHebrew/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon(TM) Graphics (ID=0x1638)
+    Vendor:   ATI
+    VRAM:     7857 MB
+    Driver:   27.20.21020.7001
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56452
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Registered in 0.019877 seconds.
+- Loaded All Assemblies, in  1.201 seconds
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 751 ms
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.827 seconds
+Domain Reload Profiling: 3023ms
+	BeginReloadAssembly (474ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (2ms)
+	RebuildCommonClasses (100ms)
+	RebuildNativeTypeToScriptingClass (28ms)
+	initialDomainReloadingComplete (140ms)
+	LoadAllAssembliesAndSetupDomain (454ms)
+		LoadAssemblies (467ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (445ms)
+			TypeCache.Refresh (441ms)
+				TypeCache.ScanAssembly (409ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (1828ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1707ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (1050ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (17ms)
+			ProcessInitializeOnLoadAttributes (435ms)
+			ProcessInitializeOnLoadMethodAttributes (191ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  3.787 seconds
+Refreshing native plugins compatible for Editor in 4.10 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.584 seconds
+Domain Reload Profiling: 6357ms
+	BeginReloadAssembly (2137ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (72ms)
+	RebuildCommonClasses (119ms)
+	RebuildNativeTypeToScriptingClass (34ms)
+	initialDomainReloadingComplete (112ms)
+	LoadAllAssembliesAndSetupDomain (1370ms)
+		LoadAssemblies (1053ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (623ms)
+			TypeCache.Refresh (477ms)
+				TypeCache.ScanAssembly (435ms)
+			BuildScriptInfoCaches (123ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (2585ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1921ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (50ms)
+			SetLoadedEditorAssemblies (11ms)
+			BeforeProcessingInitializeOnLoad (138ms)
+			ProcessInitializeOnLoadAttributes (1622ms)
+			ProcessInitializeOnLoadMethodAttributes (77ms)
+			AfterProcessingInitializeOnLoad (23ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (21ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 3.90 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 30 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3731 unused Assets / (1.4 MB). Loaded Objects now: 4340.
+Memory consumption went from 115.8 MB to 114.4 MB.
+Total: 18.874200 ms (FindLiveObjects: 1.043200 ms CreateObjectMapping: 0.506200 ms MarkObjects: 14.510200 ms  DeleteObjects: 2.812800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 619769.709936 seconds.
+  path: Assets/RTLTMPro/Scripts/Editor
+  artifactKey: Guid(c6c18abdc8a69b7408f1ed882aa3c674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RTLTMPro/Scripts/Editor using Guid(c6c18abdc8a69b7408f1ed882aa3c674) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c4cff9f751d32daa64dbe9eeff897aa5') in 0.043926 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.132858 seconds.
+  path: Assets/RTLTMPro/Scripts/Runtime/RTLTMPro.asmdef
+  artifactKey: Guid(1fbc052e3ea2ff24b8874f1cedb59b6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RTLTMPro/Scripts/Runtime/RTLTMPro.asmdef using Guid(1fbc052e3ea2ff24b8874f1cedb59b6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6f030ba3a17c147201d00afe4b7e74d5') in 0.0031403 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.167484 seconds.
+  path: Assets/RTLTMPro/Scripts/Runtime/Types
+  artifactKey: Guid(6b8c9046d675aaf418a28f7b367e9666) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RTLTMPro/Scripts/Runtime/Types using Guid(6b8c9046d675aaf418a28f7b367e9666) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4896c7d5539d30d03de7ee9a502da4cb') in 0.0015463 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.225807 seconds.
+  path: Assets/RTLTMPro/Scripts/Runtime/Types/ArabicGeneralLetters.cs
+  artifactKey: Guid(116e8809289c406bb5510d6ed96c379e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RTLTMPro/Scripts/Runtime/Types/ArabicGeneralLetters.cs using Guid(116e8809289c406bb5510d6ed96c379e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c1a5749b3c7a5721f301a74e0b1ce16e') in 0.0015022 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.110508 seconds.
+  path: Assets/RTLTMPro/Scripts/Runtime/Types/ArabicIsolatedLetters.cs
+  artifactKey: Guid(8dd81b4441b2491c9a226ddcacecc4fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RTLTMPro/Scripts/Runtime/Types/ArabicIsolatedLetters.cs using Guid(8dd81b4441b2491c9a226ddcacecc4fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '092639754d15e59cb8add63876360be6') in 0.0018001 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.927 seconds
+Refreshing native plugins compatible for Editor in 2.82 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.944 seconds
+Domain Reload Profiling: 3866ms
+	BeginReloadAssembly (724ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (43ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (1ms)
+		CreateAndSetChildDomain (226ms)
+	RebuildCommonClasses (89ms)
+	RebuildNativeTypeToScriptingClass (29ms)
+	initialDomainReloadingComplete (59ms)
+	LoadAllAssembliesAndSetupDomain (1019ms)
+		LoadAssemblies (905ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (409ms)
+			TypeCache.Refresh (27ms)
+				TypeCache.ScanAssembly (3ms)
+			BuildScriptInfoCaches (364ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (1945ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1406ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (36ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (119ms)
+			ProcessInitializeOnLoadAttributes (1166ms)
+			ProcessInitializeOnLoadMethodAttributes (56ms)
+			AfterProcessingInitializeOnLoad (21ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (19ms)
+Refreshing native plugins compatible for Editor in 3.17 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3729 unused Assets / (1.0 MB). Loaded Objects now: 4343.
+Memory consumption went from 109.1 MB to 108.1 MB.
+Total: 13.799800 ms (FindLiveObjects: 0.747100 ms CreateObjectMapping: 0.427300 ms MarkObjects: 10.422600 ms  DeleteObjects: 2.200600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 636.025747 seconds.
+  path: Assets/RTLTMPro/Fonts/ArabicFont.asset
+  artifactKey: Guid(af1cfb4bd170f9148b5065562bbd2f69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RTLTMPro/Fonts/ArabicFont.asset using Guid(af1cfb4bd170f9148b5065562bbd2f69) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1b5069acf4ee5211d1cd33af0c4e06d6') in 0.366864 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/RTLTMPro/Fonts/segoeuiz.ttf
+  artifactKey: Guid(5aba8d1fe0adb75448a36a2f33369bff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RTLTMPro/Fonts/segoeuiz.ttf using Guid(5aba8d1fe0adb75448a36a2f33369bff) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '91f8f99459c08bd706846d2409632916') in 0.0355574 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/RTLTMPro/Fonts/segoeuib.ttf
+  artifactKey: Guid(d1bdc9dff43912043a4b63e610e99266) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RTLTMPro/Fonts/segoeuib.ttf using Guid(d1bdc9dff43912043a4b63e610e99266) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5db71aaf9805df4873ab24f90ccb8ce1') in 0.0360009 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000084 seconds.
+  path: Assets/RTLTMPro/Fonts/segoeui SDF Hebrew.asset
+  artifactKey: Guid(743ff6528cc67d24bbc54d2969f0af93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RTLTMPro/Fonts/segoeui SDF Hebrew.asset using Guid(743ff6528cc67d24bbc54d2969f0af93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0de2e7d7ac665ef7bb2d00d682362052') in 0.1060844 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/RTLTMPro/Fonts/seguibli.ttf
+  artifactKey: Guid(7fb6cf9dac0f6b7409faa2bfbbfc1731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RTLTMPro/Fonts/seguibli.ttf using Guid(7fb6cf9dac0f6b7409faa2bfbbfc1731) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a5a2b032d35f94449073d27fa3ff5bf6') in 0.0272984 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/RTLTMPro/Fonts/seguisb.ttf
+  artifactKey: Guid(f8d856bf2dfba9648b0093dd6332f61c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RTLTMPro/Fonts/seguisb.ttf using Guid(f8d856bf2dfba9648b0093dd6332f61c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '09baedd64b4587160636764d58eca097') in 0.026158 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/RTLTMPro/Fonts/seguibl.ttf
+  artifactKey: Guid(31da68c03338d10419ff53ab68ba652b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RTLTMPro/Fonts/seguibl.ttf using Guid(31da68c03338d10419ff53ab68ba652b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7ba63cad8df96397c84c9c5b49aad0f6') in 0.0279828 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/RTLTMPro/Fonts/seguisbi.ttf
+  artifactKey: Guid(b80fc7f7e27d47d42984ed7d060960aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RTLTMPro/Fonts/seguisbi.ttf using Guid(b80fc7f7e27d47d42984ed7d060960aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd61cd5641bfee49ce8c70c45ea002446') in 0.0251521 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/RTLTMPro/Fonts/segoeuil.ttf
+  artifactKey: Guid(f8c73f50c85b149499a3aa2b3cffbcaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RTLTMPro/Fonts/segoeuil.ttf using Guid(f8c73f50c85b149499a3aa2b3cffbcaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f158877bf495e76085729ca8507374e7') in 0.0270252 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/RTLTMPro/Fonts/segoeuii.ttf
+  artifactKey: Guid(c856d0ba3d98eae439772a7f69ff3ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RTLTMPro/Fonts/segoeuii.ttf using Guid(c856d0ba3d98eae439772a7f69ff3ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd9716fddf3f21572f195dc68b752e510') in 0.0209042 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
