@@ -141,16 +141,117 @@ namespace RTLTMPro
         [MenuItem("GameObject/UI/Input Field - RTLTMP", false, 2037)]
         private static void AddTextMeshProInputField(MenuCommand menuCommand)
         {
-            var go = RTLDefaultControls.CreateInputField(GetStandardResources());
-            PlaceUIElementRoot(go, menuCommand);
+            //var go = RTLDefaultControls.CreateInputField(GetStandardResources());
+            var go = Resources.Load<GameObject>("UIElements/RTLTMP-InputField");
+            if (go == null)
+            {
+                Debug.LogError("Prefab not found at Resources/CustomUI/RTLButton");
+                return;
+            }
+
+            // Instantiate the prefab
+            GameObject instance = (GameObject)PrefabUtility.InstantiatePrefab(go);
+
+            // Register undo operation
+            Undo.RegisterCreatedObjectUndo(instance, "Create RTL Field");
+
+            // Parent it under selected object or create canvas
+            GameObject parent = menuCommand.context as GameObject;
+            if (parent == null || parent.GetComponentInParent<Canvas>() == null)
+            {
+                Canvas canvas = Object.FindObjectOfType<Canvas>();
+                if (canvas == null)
+                {
+                    GameObject canvasGO = new GameObject("Canvas", typeof(Canvas));
+                    canvasGO.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
+                    canvasGO.AddComponent<CanvasScaler>();
+                    canvasGO.AddComponent<GraphicRaycaster>();
+                    Undo.RegisterCreatedObjectUndo(canvasGO, "Create Canvas");
+
+                    canvas = canvasGO.GetComponent<Canvas>();
+
+                    // Ensure there's an EventSystem
+                    if (Object.FindObjectOfType<EventSystem>() == null)
+                    {
+                        GameObject es = new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
+                        Undo.RegisterCreatedObjectUndo(es, "Create EventSystem");
+                    }
+
+                    parent = canvasGO;
+                }
+                else
+                {
+                    parent = canvas.gameObject;
+                }
+            }
+
+            // Set parent and align
+            GameObjectUtility.SetParentAndAlign(instance, parent);
+
+            // Select it
+            Selection.activeGameObject = instance;
+
+            PrefabUtility.UnpackPrefabInstance(instance, PrefabUnpackMode.Completely, InteractionMode.UserAction);
+            PlaceUIElementRoot(instance, menuCommand);
         }
 
         [MenuItem("GameObject/UI/Dropdown - RTLTMP", false, 2036)]
         public static void AddDropdown(MenuCommand menuCommand)
         {
-            GameObject go = RTLDefaultControls.CreateDropdown(GetStandardResources());
-            PlaceUIElementRoot(go, menuCommand);
+            var go = Resources.Load<GameObject>("UIElements/RTLTMP-Dropdown");
+            if (go == null)
+            {
+                Debug.LogError("Prefab not found at Resources/UIElements/RTLTMP-Dropdown");
+                return;
+            }
+
+            // Instantiate the prefab
+            GameObject instance = (GameObject)PrefabUtility.InstantiatePrefab(go);
+
+            // Register undo operation
+            Undo.RegisterCreatedObjectUndo(instance, "Create RTL Dropdown");
+
+            // Parent it under selected object or create canvas
+            GameObject parent = menuCommand.context as GameObject;
+            if (parent == null || parent.GetComponentInParent<Canvas>() == null)
+            {
+                Canvas canvas = Object.FindObjectOfType<Canvas>();
+                if (canvas == null)
+                {
+                    GameObject canvasGO = new GameObject("Canvas", typeof(Canvas));
+                    canvasGO.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
+                    canvasGO.AddComponent<CanvasScaler>();
+                    canvasGO.AddComponent<GraphicRaycaster>();
+                    Undo.RegisterCreatedObjectUndo(canvasGO, "Create Canvas");
+
+                    canvas = canvasGO.GetComponent<Canvas>();
+
+                    // Ensure there's an EventSystem
+                    if (Object.FindObjectOfType<EventSystem>() == null)
+                    {
+                        GameObject es = new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
+                        Undo.RegisterCreatedObjectUndo(es, "Create EventSystem");
+                    }
+
+                    parent = canvasGO;
+                }
+                else
+                {
+                    parent = canvas.gameObject;
+                }
+            }
+
+            // Set parent and align
+            GameObjectUtility.SetParentAndAlign(instance, parent);
+
+            // Select it
+            Selection.activeGameObject = instance;
+
+            PrefabUtility.UnpackPrefabInstance(instance, PrefabUnpackMode.Completely, InteractionMode.UserAction);
+            PlaceUIElementRoot(instance, menuCommand);
         }
+
+
 
         [MenuItem("GameObject/UI/Button - RTLTMP", false, 2005)]
         public static void CreateButton(MenuCommand command)

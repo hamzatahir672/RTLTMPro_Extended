@@ -82,6 +82,19 @@ namespace RTLTMPro
             }
         }
 
+        public bool FieldFix
+        {
+            get { return fieldFix; }
+            set
+            {
+                if (fieldFix == value)
+                    return;
+
+                fieldFix = value;
+                havePropertiesChanged = true;
+            }
+        }
+
         [SerializeField] protected bool preserveNumbers;
 
         [SerializeField] protected bool farsi = true;
@@ -91,6 +104,8 @@ namespace RTLTMPro
         [SerializeField] protected bool fixTags = true;
 
         [SerializeField] protected bool forceFix;
+
+        [SerializeField] protected bool fieldFix;
 
         protected readonly FastStringBuilder finalText = new FastStringBuilder(RTLSupport.DefaultBufferSize);
 
@@ -118,6 +133,14 @@ namespace RTLTMPro
             }
 
             havePropertiesChanged = true;
+        }
+
+
+
+        public void ChangeText(string text) 
+        {
+            originalText = text;
+            UpdateText();
         }
 
         private string GetFixedText(string input)

@@ -470,8 +470,8 @@ MonoBehaviour:
     \uFE87\u0650\uFEE7\uFC60\uFEEA\u064F \uFEC3\u0650\uFED4\u0652\uFEDE\u064C \uFEE7\u064E\uFEB8\u0650\uFBFF\uFEC2\u064C
     \uFEED\u064E\uFEE3\u064F\uFEA0\u0652\uFE98\u064E\uFEEC\u0650\uFEAA\u064C."
   m_isRightToLeft: 1
-  m_fontAsset: {fileID: 11400000, guid: 3fbde2e562e333d488bc46986fc6f4f1, type: 2}
-  m_sharedMaterial: {fileID: -6949820610600499109, guid: 3fbde2e562e333d488bc46986fc6f4f1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 41272e6181e5c0745a46dd4c5da1d0e0, type: 2}
+  m_sharedMaterial: {fileID: 6186187095023713641, guid: 41272e6181e5c0745a46dd4c5da1d0e0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -563,6 +563,7 @@ MonoBehaviour:
     \u0646\u064E\u0634\u0650\u064A\u0637\u064C \u0648\u064E\u0645\u064F\u062C\u0652\u062A\u064E\u0647\u0650\u062F\u064C."
   fixTags: 1
   forceFix: 0
+  fieldFix: 0
 --- !u!222 &1543159992
 CanvasRenderer:
   m_ObjectHideFlags: 0

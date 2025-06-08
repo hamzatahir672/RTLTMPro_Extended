@@ -449,7 +449,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\"\uFEE3\uFE92\uFE8E\uFEDF\uFED0\uFBA7\" )ahglabuM( \uFE8D\uFBFE\uFB8F
+  m_text: "\"<b>\uFEE3\uFE92\uFE8E\uFEDF\uFED0\uFBA7</b>\" )ahglabuM( \uFE8D\uFBFE\uFB8F
     \uFECB\uFEAE\uFE91\uFBFD \uFE8D\uFEED\uFEAD \uFE8D\uFEAD\uFEA9\uFEED \uFEDF\uFED4\uFEC6
     \uFBA8\uFBAF \uFE9F\uFEB2 \uFB90\uFE8E \uFEE3\uFEC4\uFEE0\uFE90 \uFBA8\uFEEE\uFE97\uFE8E
     \uFBA8\uFBAF \uFB90\uFEB4\uFBFD \uFE91\uFE8E\uFE95 \uFB90\uFEEE \uFEA3\uFEAA
@@ -465,8 +465,8 @@ MonoBehaviour:
     \uFBFE\uFE8E \uFEA9\uFEDF\uFB7D\uFEB4\uFB57 \uFE91\uFEE8\uFE8E\uFBFE\uFE8E \uFE9F\uFE8E
     \uFEB3\uFB91\uFBAF\u06D4"
   m_isRightToLeft: 1
-  m_fontAsset: {fileID: 11400000, guid: af1cfb4bd170f9148b5065562bbd2f69, type: 2}
-  m_sharedMaterial: {fileID: 4681648928578982407, guid: af1cfb4bd170f9148b5065562bbd2f69, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0f97bfad6adde594aa4a30ce13f1deb9, type: 2}
+  m_sharedMaterial: {fileID: 7601941581664943451, guid: 0f97bfad6adde594aa4a30ce13f1deb9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -500,7 +500,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: -3
+  m_characterSpacing: -4
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -536,7 +536,7 @@ MonoBehaviour:
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
   preserveNumbers: 0
   farsi: 1
-  originalText: "\"\u0645\u0628\u0627\u0644\u063A\u06C1\" (Mubalgha) \u0627\u06CC\u06A9
+  originalText: "\"<b>\u0645\u0628\u0627\u0644\u063A\u06C1</b>\" (Mubalgha) \u0627\u06CC\u06A9
     \u0639\u0631\u0628\u06CC \u0627\u0648\u0631 \u0627\u0631\u062F\u0648 \u0644\u0641\u0638
     \u06C1\u06D2 \u062C\u0633 \u06A9\u0627 \u0645\u0637\u0644\u0628 \u06C1\u0648\u062A\u0627
     \u06C1\u06D2 \u06A9\u0633\u06CC \u0628\u0627\u062A \u06A9\u0648 \u062D\u062F
@@ -553,6 +553,7 @@ MonoBehaviour:
     \u0633\u06A9\u06D2\u06D4"
   fixTags: 1
   forceFix: 0
+  fieldFix: 0
 --- !u!222 &1543159992
 CanvasRenderer:
   m_ObjectHideFlags: 0

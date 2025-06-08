@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -38,13 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
-  m_GIWorkflowMode: 0
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -67,9 +66,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -97,14 +93,14 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingDataAsset: {fileID: 112000000, guid: 1c5983737e8e00d4186083846d54ef9a, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 8cb2780bcd0023548a6bdfd6da24eca2, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +113,9 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -149,11 +147,11 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1432274679}
   - {fileID: 673264099}
   m_Father: {fileID: 1632210511}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -175,6 +173,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -193,8 +192,7 @@ MonoBehaviour:
     \u05D1\u05D3\u05E3 <sprite=0/> \u05E9\u05DC \u05EA\u05D5\u05E1\u05E3 \u05D6\u05D4."
   m_isRightToLeft: 1
   m_fontAsset: {fileID: 11400000, guid: 743ff6528cc67d24bbc54d2969f0af93, type: 2}
-  m_sharedMaterial: {fileID: -6212919841344071475, guid: 743ff6528cc67d24bbc54d2969f0af93,
-    type: 2}
+  m_sharedMaterial: {fileID: -6212919841344071475, guid: 743ff6528cc67d24bbc54d2969f0af93, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -218,7 +216,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.8
+  m_fontSize: 26.3
   m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -234,15 +232,17 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -276,6 +276,7 @@ MonoBehaviour:
     \u05D1\u05D3\u05E3 <sprite=0/> \u05E9\u05DC \u05EA\u05D5\u05E1\u05E3 \u05D6\u05D4."
   fixTags: 1
   forceFix: 0
+  fieldFix: 0
 --- !u!222 &28896037
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -324,9 +325,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -360,12 +369,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282840810}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &345938281
 GameObject:
@@ -378,7 +388,7 @@ GameObject:
   - component: {fileID: 345938282}
   - component: {fileID: 345938283}
   m_Layer: 0
-  m_Name: TMP SubMeshUI [TextMeshPro/Sprite]
+  m_Name: 'TMP SubMeshUI [TextMeshPro/Sprite]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -394,9 +404,9 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1526930147}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -422,7 +432,7 @@ GameObject:
   - component: {fileID: 467942528}
   - component: {fileID: 467942529}
   m_Layer: 0
-  m_Name: TMP SubMeshUI [segoeui RTL SDF Material + LiberationSans SDF Atlas]
+  m_Name: 'TMP SubMeshUI [segoeui RTL SDF Material + LiberationSans SDF Atlas]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -438,9 +448,9 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1432646671}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -483,11 +493,11 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1127370893}
   - {fileID: 681459122}
   m_Father: {fileID: 1632210511}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -509,6 +519,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -518,9 +529,10 @@ MonoBehaviour:
     \uFE9F\uFEE4\uFEF4\uFECA \uFEE3\uFEF4\uFEB0\uFE8D\uFE95 \uFE8D\uFEDF\uFE92\uFEAE\uFEE7\uFE8E\uFEE3\uFE9E
     \uFE8D\uFEDF\uFEE4\uFEB4\uFE8E\uFECB\uFEAA <b>orPhseMtxeT ytinU</b> \uFE91\uFE8E\uFEDF\uFEE0\uFED0\uFE8E\uFE95
     \uFE8D\uFEDF\uFED4\uFE8E\uFEAD\uFEB3\uFEF4\uFE94 \uFEED\uFE8D\uFEDF\uFECC\uFEAE\uFE91\uFEF4\uFE94
-    \uFEED\uFE8D\uFEDF\uFECC\uFE92\uFEAE\uFEF3\uFE94.\n\n\uFEEB\uFEAC\uFE8D \uFE8D\uFEDF\uFE92\uFEAE\uFEE7\uFE8E\uFEE3\uFE9E
-    \uFE8D\uFEDF\uFEE4\uFEB4\uFE8E\uFECB\uFEAA <color=#20bbff>\uFEE3\uFED4\uFE98\uFEEE\uFEA1
-    \uFE8D\uFEDF\uFEE4\uFEBC\uFEAA\uFEAD</color> \uFEED <color=#20bbff>\uFEE3\uFEA0\uFE8E\uFEE7\uFEF2</color>.\n\n\uFEF3\uFEAA\uFECB\uFEE2
+    \uFEED\uFE8D\uFEDF\uFECC\uFEAE\uFEA9\uFEF3\uFE94 \uFEED\uFE8D\uFEDF\uFECC\uFE92\uFEAE\uFEF3\uFE94.\n\n\uFEEB\uFEAC\uFE8D
+    \uFE8D\uFEDF\uFE92\uFEAE\uFEE7\uFE8E\uFEE3\uFE9E \uFE8D\uFEDF\uFEE4\uFEB4\uFE8E\uFECB\uFEAA
+    <color=#20bbff>\uFEE3\uFED4\uFE98\uFEEE\uFEA1 \uFE8D\uFEDF\uFEE4\uFEBC\uFEAA\uFEAD</color>
+    \uFEED <color=#20bbff>\uFEE3\uFEA0\uFE8E\uFEE7\uFEF2</color>.\n\n\uFEF3\uFEAA\uFECB\uFEE2
     \uFEEB\uFEAC\uFE8D \uFE8D\uFEDF\uFE92\uFEAE\uFEE7\uFE8E\uFEE3\uFE9E \uFE8D\uFEDF\uFEE4\uFEB4\uFE8E\uFECB\uFEAA
     \uFE91\uFEB8\uFEDC\uFEDE \uFEDB\uFE8E\uFEE3\uFEDE \uFE8D\uFEDF\uFEE8\uFEBC\uFEEE\uFEB9
     \uFE8D\uFEDF\uFED4\uFE8E\uFEAD\uFEB3\uFEF4\uFE94 \uFEED\uFE8D\uFEF9\uFEE7\uFEA0\uFEE0\uFEF4\uFEB0\uFEF3\uFE94
@@ -531,9 +543,8 @@ MonoBehaviour:
     \uFECB\uFEE0\uFEF2 \uFEBB\uFED4\uFEA4\uFE94 <sprite=0/> \uFEE3\uFEE6 \uFEEB\uFEAC\uFE8D
     \uFE8D\uFEDF\uFEE4\uFEDC\uFEEE\uFEE5 \uFE8D\uFEF9\uFEBF\uFE8E\uFED3\uFEF2."
   m_isRightToLeft: 1
-  m_fontAsset: {fileID: 11400000, guid: 3fbde2e562e333d488bc46986fc6f4f1, type: 2}
-  m_sharedMaterial: {fileID: -6949820610600499109, guid: 3fbde2e562e333d488bc46986fc6f4f1,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 41272e6181e5c0745a46dd4c5da1d0e0, type: 2}
+  m_sharedMaterial: {fileID: 6186187095023713641, guid: 41272e6181e5c0745a46dd4c5da1d0e0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -557,7 +568,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 34.1
+  m_fontSize: 32.2
   m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -573,15 +584,17 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -606,9 +619,10 @@ MonoBehaviour:
     \u062C\u0645\u064A\u0639 \u0645\u064A\u0632\u0627\u062A \u0627\u0644\u0628\u0631\u0646\u0627\u0645\u062C
     \u0627\u0644\u0645\u0633\u0627\u0639\u062F <b>Unity TextMeshPro</b> \u0628\u0627\u0644\u0644\u063A\u0627\u062A
     \u0627\u0644\u0641\u0627\u0631\u0633\u064A\u0629 \u0648\u0627\u0644\u0639\u0631\u0628\u064A\u0629
-    \u0648\u0627\u0644\u0639\u0628\u0631\u064A\u0629.\n\n\u0647\u0630\u0627 \u0627\u0644\u0628\u0631\u0646\u0627\u0645\u062C
-    \u0627\u0644\u0645\u0633\u0627\u0639\u062F <color=#20bbff>\u0645\u0641\u062A\u0648\u062D
-    \u0627\u0644\u0645\u0635\u062F\u0631</color> \u0648 <color=#20bbff>\u0645\u062C\u0627\u0646\u064A</color>.\n\n\u064A\u062F\u0639\u0645
+    \u0648\u0627\u0644\u0639\u0631\u062F\u064A\u0629 \u0648\u0627\u0644\u0639\u0628\u0631\u064A\u0629.\n\n\u0647\u0630\u0627
+    \u0627\u0644\u0628\u0631\u0646\u0627\u0645\u062C \u0627\u0644\u0645\u0633\u0627\u0639\u062F
+    <color=#20bbff>\u0645\u0641\u062A\u0648\u062D \u0627\u0644\u0645\u0635\u062F\u0631</color>
+    \u0648 <color=#20bbff>\u0645\u062C\u0627\u0646\u064A</color>.\n\n\u064A\u062F\u0639\u0645
     \u0647\u0630\u0627 \u0627\u0644\u0628\u0631\u0646\u0627\u0645\u062C \u0627\u0644\u0645\u0633\u0627\u0639\u062F
     \u0628\u0634\u0643\u0644 \u0643\u0627\u0645\u0644 \u0627\u0644\u0646\u0635\u0648\u0635
     \u0627\u0644\u0641\u0627\u0631\u0633\u064A\u0629 \u0648\u0627\u0644\u0625\u0646\u062C\u0644\u064A\u0632\u064A\u0629
@@ -620,6 +634,7 @@ MonoBehaviour:
     \u0627\u0644\u0645\u0643\u0648\u0646 \u0627\u0644\u0625\u0636\u0627\u0641\u064A."
   fixTags: 1
   forceFix: 0
+  fieldFix: 0
 --- !u!222 &645895904
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -639,7 +654,7 @@ GameObject:
   - component: {fileID: 673264099}
   - component: {fileID: 673264100}
   m_Layer: 0
-  m_Name: TMP SubMeshUI [TextMeshPro/Sprite]
+  m_Name: 'TMP SubMeshUI [TextMeshPro/Sprite]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -655,9 +670,9 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 28896035}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -683,7 +698,7 @@ GameObject:
   - component: {fileID: 681459122}
   - component: {fileID: 681459124}
   m_Layer: 0
-  m_Name: TMP SubMeshUI [TextMeshPro/Sprite]
+  m_Name: 'TMP SubMeshUI [TextMeshPro/Sprite]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -699,9 +714,9 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 645895902}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -727,7 +742,7 @@ GameObject:
   - component: {fileID: 788750598}
   - component: {fileID: 788750599}
   m_Layer: 0
-  m_Name: TMP SubMeshUI [segoeui RTL SDF Material + LiberationSans SDF Atlas]
+  m_Name: 'TMP SubMeshUI [segoeui RTL SDF Material + LiberationSans SDF Atlas]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -743,9 +758,9 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1526930147}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -790,6 +805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -819,12 +835,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889652352}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1127370892
 GameObject:
@@ -837,7 +854,7 @@ GameObject:
   - component: {fileID: 1127370893}
   - component: {fileID: 1127370895}
   m_Layer: 0
-  m_Name: TMP SubMeshUI [segoeui RTL SDF Material + LiberationSans SDF Atlas]
+  m_Name: 'TMP SubMeshUI [segoeui RTL SDF Material + LiberationSans SDF Atlas]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -853,9 +870,9 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 645895902}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -923,7 +940,9 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -937,10 +956,10 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1632210511}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -969,6 +988,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!1 &1432274678
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,7 +1000,7 @@ GameObject:
   - component: {fileID: 1432274679}
   - component: {fileID: 1432274680}
   m_Layer: 0
-  m_Name: TMP SubMeshUI [segoeui Atlas Material + LiberationSans SDF Atlas]
+  m_Name: 'TMP SubMeshUI [segoeui Atlas Material + LiberationSans SDF Atlas]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -996,9 +1016,9 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 28896035}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1041,11 +1061,11 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 467942528}
   - {fileID: 1459844413}
   m_Father: {fileID: 1632210511}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1067,6 +1087,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1075,9 +1096,10 @@ MonoBehaviour:
     \uFEB7\uFEE4\uFE8E \uFE8D\uFBFE\uFEE6 \uFE8D\uFEE3\uFB91\uFE8E\uFEE5 \uFEAD\uFEED
     \uFEE3\uFBFF\uFEAA\uFEE9 \uFB90\uFEEA \uFE8D\uFEAF \uFE97\uFEE4\uFE8E\uFEE1 \uFED7\uFE8E\uFE91\uFEE0\uFBFF\uFE96
     \uFEEB\uFE8E\uFBFC \uFB58\uFEFC\uFB94\uFBFF\uFEE6 <b>orPhseMtxeT ytinU</b> \uFE91\uFEAE\uFE8D\uFBFC
-    \uFEAF\uFE91\uFE8E\uFEE5 \uFED3\uFE8E\uFEAD\uFEB3\uFBFD\u060C \uFECB\uFEAE\uFE91\uFBFD
-    \uFEED \uFECB\uFE92\uFEAE\uFBFC \uFE8D\uFEB3\uFE98\uFED4\uFE8E\uFEA9\uFEE9 \uFB90\uFEE8\uFBFF\uFEAA.\n\n\uFE8D\uFBFE\uFEE6
-    \uFB58\uFEFC\uFB94\uFBFF\uFEE6 <color=#20bbff>ecruoS-nepO</color> \uFEED <color=#20bbff>\uFEAD\uFE8D\uFBFE\uFB95\uFE8E\uFEE5</color>
+    \uFEAF\uFE91\uFE8E\uFEE5 \uFED3\uFE8E\uFEAD\uFEB3\uFBFD\u060C \uFECB\uFEAE\uFE91\uFBFD\u060C
+    \uFE8D\uFEAD\uFEA9\uFEED \uFEED \uFECB\uFE92\uFEAE\uFBFC \uFE8D\uFEB3\uFE98\uFED4\uFE8E\uFEA9\uFEE9
+    \uFB90\uFEE8\uFBFF\uFEAA.\n\n\uFE8D\uFBFE\uFEE6 \uFB58\uFEFC\uFB94\uFBFF\uFEE6
+    <color=#20bbff>ecruoS-nepO</color> \uFEED <color=#20bbff>\uFEAD\uFE8D\uFBFE\uFB95\uFE8E\uFEE5</color>
     \uFEEB\uFEB4\uFE96.\n\n\uFE8D\uFBFE\uFEE6 \uFB58\uFEFC\uFB94\uFBFF\uFEE6 \uFEE3\uFE98\uFEE6
     \uFEEB\uFE8E\uFBFC \uFEC3\uFEEE\uFEFB\uFEE7\uFBFD \uFED3\uFE8E\uFEAD\uFEB3\uFBFD
     \uFEED \uFE8D\uFEE7\uFB95\uFEE0\uFBFF\uFEB4\uFBFD\u060C txeT hciR \uFEED )tiFtseB(eziSotuA
@@ -1087,9 +1109,8 @@ MonoBehaviour:
     \uFBFC <sprite=0> \uFE8D\uFBFE\uFEE6 \uFB58\uFEFC\uFB94\uFBFF\uFEE6 \uFEE3\uFEC4\uFEAE\uFEA1
     \uFB90\uFEE8\uFBFF\uFEAA."
   m_isRightToLeft: 1
-  m_fontAsset: {fileID: 11400000, guid: 3fbde2e562e333d488bc46986fc6f4f1, type: 2}
-  m_sharedMaterial: {fileID: -6949820610600499109, guid: 3fbde2e562e333d488bc46986fc6f4f1,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 41272e6181e5c0745a46dd4c5da1d0e0, type: 2}
+  m_sharedMaterial: {fileID: 6186187095023713641, guid: 41272e6181e5c0745a46dd4c5da1d0e0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1113,7 +1134,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 34
+  m_fontSize: 31.9
   m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1129,15 +1150,17 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -1162,19 +1185,20 @@ MonoBehaviour:
     \u0631\u0648 \u0645\u064A\u062F\u0647 \u06A9\u0647 \u0627\u0632 \u062A\u0645\u0627\u0645
     \u0642\u0627\u0628\u0644\u064A\u062A \u0647\u0627\u064A \u067E\u0644\u0627\u06AF\u064A\u0646
     <b>Unity TextMeshPro</b> \u0628\u0631\u0627\u064A \u0632\u0628\u0627\u0646 \u0641\u0627\u0631\u0633\u064A\u060C
-    \u0639\u0631\u0628\u064A \u0648 \u0639\u0628\u0631\u064A \u0627\u0633\u062A\u0641\u0627\u062F\u0647
-    \u06A9\u0646\u064A\u062F.\n\n\u0627\u064A\u0646 \u067E\u0644\u0627\u06AF\u064A\u0646
-    <color=#20bbff>Open-Source</color> \u0648 <color=#20bbff>\u0631\u0627\u064A\u06AF\u0627\u0646</color>
-    \u0647\u0633\u062A.\n\n\u0627\u064A\u0646 \u067E\u0644\u0627\u06AF\u064A\u0646
-    \u0645\u062A\u0646 \u0647\u0627\u064A \u0637\u0648\u0644\u0627\u0646\u064A \u0641\u0627\u0631\u0633\u064A
-    \u0648 \u0627\u0646\u06AF\u0644\u064A\u0633\u064A\u060C Rich Text \u0648 AutoSize(BestFit)
-    \u0631\u0648 \u0628\u0647 \u0637\u0648\u0631 \u06A9\u0627\u0645\u0644 \u067E\u0634\u062A\u064A\u0628\u0627\u0646\u064A
-    \u0645\u064A\u06A9\u0646\u0647.\n\n\u0645\u0634\u06A9\u0644\u0627\u062A \u0627\u062D\u062A\u0645\u0627\u0644\u064A
-    \u0631\u0648 \u0645\u064A\u062A\u0648\u0646\u064A\u062F \u062F\u0631 \u0635\u0641\u062D\u0647
-    \u064A <sprite=0> \u0627\u064A\u0646 \u067E\u0644\u0627\u06AF\u064A\u0646 \u0645\u0637\u0631\u062D
-    \u06A9\u0646\u064A\u062F."
+    \u0639\u0631\u0628\u064A\u060C \u0627\u0631\u062F\u0648 \u0648 \u0639\u0628\u0631\u064A
+    \u0627\u0633\u062A\u0641\u0627\u062F\u0647 \u06A9\u0646\u064A\u062F.\n\n\u0627\u064A\u0646
+    \u067E\u0644\u0627\u06AF\u064A\u0646 <color=#20bbff>Open-Source</color> \u0648
+    <color=#20bbff>\u0631\u0627\u064A\u06AF\u0627\u0646</color> \u0647\u0633\u062A.\n\n\u0627\u064A\u0646
+    \u067E\u0644\u0627\u06AF\u064A\u0646 \u0645\u062A\u0646 \u0647\u0627\u064A \u0637\u0648\u0644\u0627\u0646\u064A
+    \u0641\u0627\u0631\u0633\u064A \u0648 \u0627\u0646\u06AF\u0644\u064A\u0633\u064A\u060C
+    Rich Text \u0648 AutoSize(BestFit) \u0631\u0648 \u0628\u0647 \u0637\u0648\u0631
+    \u06A9\u0627\u0645\u0644 \u067E\u0634\u062A\u064A\u0628\u0627\u0646\u064A \u0645\u064A\u06A9\u0646\u0647.\n\n\u0645\u0634\u06A9\u0644\u0627\u062A
+    \u0627\u062D\u062A\u0645\u0627\u0644\u064A \u0631\u0648 \u0645\u064A\u062A\u0648\u0646\u064A\u062F
+    \u062F\u0631 \u0635\u0641\u062D\u0647 \u064A <sprite=0> \u0627\u064A\u0646 \u067E\u0644\u0627\u06AF\u064A\u0646
+    \u0645\u0637\u0631\u062D \u06A9\u0646\u064A\u062F."
   fixTags: 1
   forceFix: 0
+  fieldFix: 0
 --- !u!222 &1432646673
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1194,7 +1218,7 @@ GameObject:
   - component: {fileID: 1459844413}
   - component: {fileID: 1459844414}
   m_Layer: 0
-  m_Name: TMP SubMeshUI [TextMeshPro/Sprite]
+  m_Name: 'TMP SubMeshUI [TextMeshPro/Sprite]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1210,9 +1234,9 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1432646671}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1255,11 +1279,11 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 788750598}
   - {fileID: 345938282}
   m_Father: {fileID: 1632210511}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1281,12 +1305,13 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'The <color=yellow>RTLTMPro</color> plugin allows you to use all the features
-    of <b>Unity TextMeshPro</b> plugin in Persian, Arabic and Hebrew.
+    of <b>Unity TextMeshPro</b> plugin in Persian, Arabic, Urdu and Hebrew.
 
 
     This
@@ -1301,9 +1326,8 @@ MonoBehaviour:
     You can report possible issues on the <sprite=0/> page of this
     plugin.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3fbde2e562e333d488bc46986fc6f4f1, type: 2}
-  m_sharedMaterial: {fileID: -6949820610600499109, guid: 3fbde2e562e333d488bc46986fc6f4f1,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1327,7 +1351,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.25
+  m_fontSize: 29.3
   m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1343,15 +1367,17 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -1372,11 +1398,11 @@ MonoBehaviour:
   preserveNumbers: 1
   farsi: 1
   originalText: 'The <color=yellow>RTLTMPro</color> plugin allows you to use all
-    the features of <b>Unity TextMeshPro</b> plugin in Persian, Arabic and Hebrew.
+    the features of <b>Unity TextMeshPro</b> plugin in Persian, Arabic, Urdu and
+    Hebrew.
 
 
-    This
-    plugin is <color=#20bbff>open-source</color> and <color=#20bbff>free</color>.
+    This plugin is <color=#20bbff>open-source</color> and <color=#20bbff>free</color>.
 
 
     This
@@ -1388,6 +1414,7 @@ MonoBehaviour:
     plugin.'
   fixTags: 1
   forceFix: 0
+  fieldFix: 0
 --- !u!222 &1526930149
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1424,13 +1451,13 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1526930147}
   - {fileID: 1432646671}
   - {fileID: 645895902}
   - {fileID: 28896035}
   m_Father: {fileID: 1404080890}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1462,6 +1489,7 @@ MonoBehaviour:
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!222 &1632210513
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1470,3 +1498,10 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632210510}
   m_CullTransparentMesh: 0
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 282840814}
+  - {fileID: 1404080890}
+  - {fileID: 889652355}
